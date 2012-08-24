@@ -5,6 +5,12 @@ import java.util.List;
 public class JogoAmigoSecreto {
 
     List<Participante> sortear( String[] participantes ) {
-        throw new UnsupportedOperationException( "Not yet implemented" );
+        List<Participante> sorteio = new ArrayList<Participante>();
+		for ( String nome:participantes){
+			Participante p= new Participante();
+			p.nome=nome;
+			sorteio.add(p);
+		}
+		
     }
 }
