@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
->>>>>>> 0d334609af22c2414f874875f8ac68f5b474a068
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.senac.ccs</groupId>
     <artifactId>senac-ccs</artifactId>
@@ -12,8 +7,6 @@
     <packaging>pom</packaging>
     <name>senac-ccs</name>
     <url>http://http://www.sp.senac.br</url>
-<<<<<<< HEAD
-=======
     <inceptionYear>2012</inceptionYear>
     
     <developers>
@@ -32,7 +25,6 @@
             </roles>
         </developer>
     </developers>
->>>>>>> 0d334609af22c2414f874875f8ac68f5b474a068
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,10 +32,7 @@
 
     <modules>
         <module>amigo-secreto</module>
-<<<<<<< HEAD
-=======
         <module>think-fast-game</module>
->>>>>>> 0d334609af22c2414f874875f8ac68f5b474a068
     </modules>
     
     <dependencies>
@@ -54,8 +43,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-<<<<<<< HEAD
 </project>
 =======
 </project>
->>>>>>> 0d334609af22c2414f874875f8ac68f5b474a068
