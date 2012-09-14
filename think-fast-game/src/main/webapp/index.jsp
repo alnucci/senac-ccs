@@ -16,29 +16,36 @@
         </div>
         <br/>
         <div id="survey">
-            <span data-bind="text: question">Qual a capital da Rússia?</span>
+            <span data-bind="text: question">Qual a capital da Russia?</span>
             <ul data-bind="foreach: answers">
                 <li style="list-style: none;">
-                    <input type="radio" name="answer"/>
-                    <span data-bind="text: $data">Moscou</span>
+                <input type="radio" name="answer" data-bind="click: answer" />
+                <span data-bind="text: $data">Moscou</span>
                 </li>
             </ul>
             <span id="message"></span>
         </div>
         <script>
-			var ThinkFast = function(){
-				var self = this;
-				self.participant = ko.observable();
-				self.question = ko.observable();
-				self.answers = ko.observableArray([]);
-				
-				self.play = function() {
-				<!--	self.question("Qual a capital da Rússia?"); -->
-				<!--	self.answers.push("Servia"); -->
-					
-				}
-				}
-				ko.applyBindings(new ThinkFast());
-		</script>
+            var ThinkFast = function() {
+                var self = this;
+                self.participant = ko.observable();
+                self.question = ko.observable();
+                self.answers = ko.observableArray([]);
+                
+                self.play = function() {
+                    $.getJSON( "/thinkfast", {action: "play", name: self.participant() }, function(data) {
+                        self.question(data.description);
+                        self.answers.removeAll();
+                        $.map(data.answers, function(answer){
+                          self.answers.push(answer);
+                        });
+                    });
+                }
+                self.bind = function(answer){
+}
+
+            }
+            ko.applyBindings(new ThinkFast());
+        </script>
     </body>
 </html>
